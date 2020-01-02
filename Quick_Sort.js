@@ -18,9 +18,10 @@ For simplicity, the first or last element could be used.
 
 
 //Pivot function returns the fixed pivot point
-function pivot(arr, left = 0, right = arr.length - 1) {
+function pivot(arr, left=0, right = arr.length - 1) { // Item I want to find a position for
   let shift = left;
   for (let i = left + 1; i <= right; i++) {
+    // shift's job is to remember the last position that an element was placed in, that was less than the pivot
     //Move all the small elements on the left side
     if (arr[i] < arr[left]) swap(arr, i, ++shift);
   }
