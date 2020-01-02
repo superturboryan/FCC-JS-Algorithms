@@ -11,13 +11,11 @@ and returns an array of these integers in sorted order from least to greatest.
 */
 
 function selectionSort(array) {
-  
-    console.log("OG array: " + array)
-  
+
     for (let index in array) {
       if (index == array.length-1) {break}
       let bSlice = array.slice(0,index)
-      let slice = array.slice(Number(index) + 1)
+      let slice = array.slice(Number(index))
       console.log(`Before slice: ${bSlice} After slice: ${slice}`)
       let sliceMin = Math.min.apply(Math,slice) 
       console.log(`Current number: ${array[index]}, checking against min from slice: ${sliceMin}`)
@@ -29,8 +27,8 @@ function selectionSort(array) {
         array[sliceMinIndex] = tmp
       }
     }
-    console.log("Sorted array: " + array)
+    console.log("Sorted: " + array)
     return array
-  }
+}
 
 selectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
