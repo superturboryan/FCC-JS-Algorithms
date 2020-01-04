@@ -60,6 +60,23 @@ class Set {
         console.log("Collection after union: " + this.collection)
         return this.collection
     }
+
+    intersection(otherSet) {
+
+        let returnSet = new Set()
+        for (let elem of this.collection) {
+            if (otherSet.indexOf(elem) !== -1) {
+                returnSet.add(elem)
+            }
+        }
+        for (let elem of otherSet) {
+            if (this.collection.indexOf(elem) !== -1) {
+                returnSet.add(elem)
+            }
+        }
+        console.log(returnSet)
+        return returnSet
+    }
 }
 
 let otherArr = ["c","d"]
@@ -68,5 +85,5 @@ let set = new Set()
 set.add("a")
 set.add("b")
 set.add("c")
-set.union(otherArr)
-console.log("Set after union: " + set.collection)
+
+console.log("Set after intersection: " + set.intersection(otherArr).collection)
