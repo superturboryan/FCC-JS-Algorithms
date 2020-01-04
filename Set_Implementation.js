@@ -52,4 +52,21 @@ class Set {
         return this.collection.length
     }
 
+    union (otherSet) {
+        for (let num of otherSet) {
+            console.log(num)
+            this.add(num)
+        }
+        console.log("Collection after union: " + this.collection)
+        return this.collection
+    }
 }
+
+let otherArr = ["c","d"]
+
+let set = new Set()
+set.add("a")
+set.add("b")
+set.add("c")
+set.union(otherArr)
+console.log("Set after union: " + set.collection)
