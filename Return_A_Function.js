@@ -35,4 +35,4 @@ function addTogether() {
     return undefined
   }
   
-  console.log(addTogether(2)([3]))
+  console.log(addTogether(2)(3))
