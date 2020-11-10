@@ -11,6 +11,8 @@ let bubbleSort = (inputArr) => {
                 swapped = true;
             }
         }
-    } while (swapped);
+    } 
+    while (swapped);
+    
     return inputArr;
 };
